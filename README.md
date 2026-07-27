@@ -148,7 +148,7 @@ The <b>very first pip-installable Glasgow Haskell Compiler</b>. One command. Thr
 </div>
 
 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 30px 20px; border-radius: 15px; color: white; text-align: center; box-shadow: 0 6px 15px rgba(0,0,0,0.2);">
-<div style="font-size: 3em; margin-bottom: 10px;">🪟</div>
+<div style="font-size: 3em; margin-bottom: 10px;">⊞</div>
 <h3 style="margin: 0; font-size: 1.3em;">Windows</h3>
 <p style="margin: 5px 0 0 0; opacity: 0.9;">Universal compatibility</p>
 </div>
