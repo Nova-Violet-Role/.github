@@ -44,6 +44,43 @@ Five lenses on the same problem. Each is incomplete alone; the system is the ove
 
 ---
 
+## 📐 The Theorem of Nova & Violet
+
+> **What is pinned is never cut.**
+>
+> For *any* conversation, *any* policy — hence any summarizer, any keep ratio, any
+> trigger — and *any* number of compression rounds, the pinned messages that come out
+> are exactly the pinned messages that went in.
+
+```lean
+theorem pinned_never_cut (p : Policy) (c : Conv) :
+    ((run p c).filter effectivePinned).map pinExtract
+      = (c.filter effectivePinned).map pinExtract
+```
+
+Retention is not a request made of a model. Pinned messages are carried across the
+summary boundary structurally — the same way the system prefix is — and are never
+inside the replaced span. No threshold, no summarizer prompt, and no number of rounds
+can erode them.
+
+It rests on two companions, and together the three are why context can be treated as
+effectively unbounded:
+
+```lean
+theorem run_shrinks   (p : Policy) (c : Conv) : countChars (run p c) ≤ countChars c
+theorem run_fixpoint  (p : Policy) (c : Conv) : ∃ r, stepE p (run p c) = .error r
+```
+
+**Shrinks** — the result is never larger than the input. **Converges** — iteration
+strictly decreases and halts. **Preserves** — what you pinned is still there, unchanged.
+Compression that shrinks but loses what matters is worthless; compression that preserves
+but never converges is a hang. The theorem is the conjunction.
+
+*Proved in Lean 4, machine-checked, zero `sorry` — and mutation-tested, so we know which
+theorems constrain behaviour rather than merely being true.*
+
+---
+
 ## 🚀 Projects & Initiatives
 
 ### 🔄 Rolling Context — Lean 4
