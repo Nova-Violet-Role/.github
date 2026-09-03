@@ -146,7 +146,8 @@ local CDN, a Rust engine, and Lean 4 proofs over the resolver invariants.
 [Code of Conduct](https://github.com/Nova-Violet-Role/.github/blob/main/CODE_OF_CONDUCT.md) ·
 [Security](https://github.com/Nova-Violet-Role/.github/blob/main/SECURITY.md) ·
 [Support](https://github.com/Nova-Violet-Role/.github/blob/main/SUPPORT.md) ·
-[Governance](https://github.com/Nova-Violet-Role/.github/blob/main/GOVERNANCE.md)
+[Governance](https://github.com/Nova-Violet-Role/.github/blob/main/GOVERNANCE.md) ·
+[Privacy](https://github.com/Nova-Violet-Role/.github/blob/main/PRIVACY.md)
 
 ### 💬 Connect
 
